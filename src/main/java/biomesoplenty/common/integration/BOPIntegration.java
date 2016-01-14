@@ -68,5 +68,17 @@ public class BOPIntegration
 				BOPLogger.warning("There was an error while integrating Thermal Expansion with Biomes O' Plenty", e);
 			}
 		}
+
+		if (Loader.isModLoaded("MineFactoryReloaded"))
+		{
+			try
+			{
+				MFRIntegration.init();
+			}
+			catch (Exception e)
+			{
+				BOPLogger.warning("There was an error while integrating MineFactory Reloaded with Biomes O' Plenty", e);
+			}
+		}
 	}
 }
